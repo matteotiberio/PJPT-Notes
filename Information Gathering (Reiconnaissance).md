@@ -1,81 +1,84 @@
-# Passive 
+# Passive
 
-Prima di effetivamente ad andare a toccare la macchina andiamo a fare una ricerca con degli strumenti di tutto ciò che ci può essere utile, per questo ricognizione passiva
+Before actually touching the machine, we perform research with tools to gather everything that could be useful; this is called passive reconnaissance.
 
-**Physical/Social:**
+## Physical/Social
 
-Andare fisicamente a captare informazioni utili (cancelli, badge...) oppure usare satelliti (Google Maps...).
-Capire anche chi sono le persone che lavorano lì guardando sui social eventuali foto.
+- Physically gathering useful information (gates, badges...) or using satellites (Google Maps...).
+- Also understanding who works there by checking social media for any photos.
 
+## Web/Host
 
-**Web/Host:**
+- **Target Validation**: WHOIS, nslookup, dnsrecon — used to verify if the provided target is correct.
+- **Finding Subdomains**: Google Fu, dig, nmap, sublist3r, bluto, curl, crt.sh...
+- **Fingerprinting**: nmap, wappalyzer, whatweb, builtwith, netcat...
+- **Data Breaches**: haveibeenpwned, breach-parse, weleakinfo
 
--*Target Validation*: WHOIS, nslookup, dnsrecon - serve per capire se il target fornito è giusto.
-
--*Finding Subdomains*: Google Fu, dig, nmap, sublist3r, bluto, curl, crt.sh... 
-
--*Fingerprinting*: nmap, wappalyzer, whatweb, builtwith, netcat... 
-
--*Data Breaches*: haveibeenpwned, breach-parse, weleakinfo
-
+---
 
 # Identifying our Targets
 
-Abbiamo usato **Bugcrowd** che è un sito per Bug Bounty per fare information gathering verso dei target in-scope.
+We used **Bugcrowd**, which is a Bug Bounty platform, to perform information gathering on in-scope targets.
+
+---
 
 # Discovering Email Addresses
 
-Usare tools come **hunter.io** permette di scoprire i domini delle email dei target.
+- Tools like **hunter.io** allow discovering email domains of targets.
+- Another useful tool is **phonebook.cz**.
+- One way to validate emails is directly on Gmail or Outlook by entering the email in the login field to see if it exists.
+- Alternatively, use tools like **email checker** and **email hippo**.
 
-Un altro tool utile è **phonebook.cz**
+---
 
-Un modo per validare le email è direttamente su gmail o outlook, immettendo l'email nel campo di login e vedere se esiste.
+# Hunting Breached Credentials
 
-Oppure con tool come **email checker** ed **email hippo**
+There are several ways to find breached credentials, such as using a list like **BreachCompilation** and some tool to read it.  
+Or websites like **DeHashed**.
 
-# Hunting Breached Credentials 
-
-Ci sono vari modi per trovare delle credenziali breachate, si può usare una lista come **BreachCompilation** e usare qualche tool che ti legga la lista.
-
-Oppure siti come **DeHashed**
+---
 
 # Hunting Subdomains
 
-Quando mettiamo * prima di un dominio, come *.esempio.com, il simbolo “*” rappresenta una *wildcard*, che ricerca tutti  subdomain disponibili per quel dominio.
+When we put `*` before a domain, like `*.example.com`, the `*` symbol represents a *wildcard* that searches all available subdomains for that domain.
 
-Un tool utile per cercare i subdomain è **sublist3r** oppure **theHarvester**
-Un sito invece è **crt.sh**
+- Useful tools for finding subdomains include **sublist3r** and **theHarvester**.  
+- A useful website is **crt.sh**.
 
-**OWASP Amass** é un tool molto utile, ma che richiede un tempo di caricamento molto lungo.
+**OWASP Amass** is a very useful tool but requires a long loading time.
+
+---
 
 # Identifying Websites
 
-Sapere con cosa é costruito un sito é molto utile. Un tool come BuiltWith puó essere molto utile, un esempio: 
+Knowing what a website is built with is very useful. A tool like BuiltWith can be very helpful, for example:
 
 ![alt text](/Images/IW.png)
 
-Ci dice tutti i tool usati in un sito specifico, utili per capire delle informazioni in piú.
+It tells you all the tools used on a specific site, useful to gain more information.
 
-Un altro tool sottoforma di estensione é **Wappalyzer**. 
+Another extension tool is **Wappalyzer**.
 
-É molto utile capire con cosa é costruito un sito, specialmente il suo framework, perché ci puó essere utile per ottenere delle vulnerabilitá specifiche su linguaggi di programmazione, webservers etc...
+It is very helpful to know what a site is built with, especially its framework, because it can help identify specific vulnerabilities related to programming languages, web servers, etc.
 
-Un altro tool per fare Informatrion Gathering su un sito é **WhatWeb**
+Another tool for Information Gathering on a site is **WhatWeb**.
+
+---
 
 # Information Gathering with Burp Suite
 
-Un tool molto utile per fare information gathering a livello di web é **Burp Suite**.
+A very useful tool for web-level information gathering is **Burp Suite**.
 
-Burp Suite fa da *proxy*, quindi intercetta le connessioni fra te e un sito.
+Burp Suite acts as a *proxy*, intercepting connections between you and a website.
 
-## Setup Burp Suite:
+## Setting up Burp Suite
 
-Per setuppare Burp Suite basta andare nelle impostazioni del browser>proxy>settare 127.0.0.1  (sia per HTTP che per HTTPS).
+To set up Burp Suite, go to browser settings > proxy > set `127.0.0.1` (for both HTTP and HTTPS).
 
-Andare poi su https://burp e scaricare il certificato cliccanto su CA Certificate.  Andare nelle impostazioni del browser>privacy & security>certificates; ed esportare il certificato precedentemente scaricato.
+Then go to https://burp and download the certificate by clicking on **CA Certificate**.  
+Go to browser settings > privacy & security > certificates and import the previously downloaded certificate.
 
+## Intercepting Traffic with Burp Suite
 
-## Intercettare il traffico con Burp Suite
-
-Burp Suite é molto utile per fare information gathering su un sito perché ti permette di acquisire molte informazioni tramite l'intercettazione delle richieste API.
-Si puó anche interagire con le richieste API.
+Burp Suite is very useful for information gathering on a website because it allows you to capture many details by intercepting API requests.  
+You can also interact with the API requests.

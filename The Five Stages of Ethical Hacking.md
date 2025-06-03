@@ -1,16 +1,18 @@
-L’*ethical hacking*, noto anche come penetration testing o hacking etico (white-hat hacking), segue un approccio strutturato per identificare e risolvere le vulnerabilità nei sistemi informatici e nelle reti. Il processo di ethical hacking generalmente coinvolge le seguenti cinque fasi:
+# Ethical Hacking
 
-1. **Ricognizione (Reconnaissance)**
-La fase di ricognizione consiste nel raccogliere informazioni sul sistema o sulla rete target. Include tecniche passive di raccolta dati, come la ricerca di informazioni pubblicamente disponibili, la navigazione su siti web e l’esame dei record DNS. L’obiettivo è raccogliere quante più informazioni possibili per comprendere il target e individuare potenziali punti di accesso.
+*Ethical hacking*, also known as penetration testing or white-hat hacking, follows a structured approach to identify and fix vulnerabilities in computer systems and networks. The ethical hacking process generally involves the following five phases:
 
-2. **Scansione (Scanning)**
-Nella fase di scansione, l’hacker etico sonda attivamente il sistema o la rete target per scoprire porte aperte, servizi attivi e vulnerabilità. Vengono utilizzati vari strumenti e tecniche, come la scansione delle porte, la mappatura della rete e la scansione delle vulnerabilità. Questa fase aiuta a identificare debolezze che potrebbero essere sfruttate.
+1. **Reconnaissance**  
+   The reconnaissance phase involves gathering information about the target system or network. It includes passive data collection techniques such as searching publicly available information, browsing websites, and examining DNS records. The goal is to collect as much information as possible to understand the target and identify potential entry points.
 
-3. **Accesso (Gaining Access)**
-In questa fase, l’hacker etico tenta di ottenere accesso non autorizzato al sistema o alla rete target. L’attenzione è rivolta a sfruttare le vulnerabilità individuate nella fase di scansione. Possono essere impiegate tecniche come il cracking delle password, l’ingegneria sociale e lo sfruttamento di vulnerabilità software per ottenere l’accesso.
+2. **Scanning**  
+   In the scanning phase, the ethical hacker actively probes the target system or network to discover open ports, active services, and vulnerabilities. Various tools and techniques are used, such as port scanning, network mapping, and vulnerability scanning. This phase helps identify weaknesses that could be exploited.
 
-4. **Mantenimento dell’accesso (Maintaining Access)**
-Una volta ottenuto l’accesso, l’hacker etico mira a mantenerlo nel sistema o nella rete compromessi. Questa fase implica il superamento di meccanismi di sicurezza, l’installazione di backdoor o strumenti di accesso remoto e la creazione di un accesso persistente. L’obiettivo è imitare le azioni di un attaccante reale e valutare l’impatto potenziale di una compromissione riuscita.
+3. **Gaining Access**  
+   During this phase, the ethical hacker attempts to gain unauthorized access to the target system or network. The focus is on exploiting vulnerabilities identified during the scanning phase. Techniques such as password cracking, social engineering, and software vulnerability exploitation may be employed to gain access.
 
-5. **Coprire le tracce (Covering Tracks)**
-Nella fase finale, l’hacker etico elimina ogni traccia delle proprie attività sul sistema o sulla rete target. Questo include la cancellazione dei log, la modifica o rimozione di file e il ripristino del sistema al suo stato originale. L’obiettivo è garantire che l’attività di ethical hacking rimanga non rilevata, senza lasciare prove dell’attività di penetration testing.
+4. **Maintaining Access**  
+   Once access is gained, the ethical hacker aims to maintain it within the compromised system or network. This phase involves bypassing security mechanisms, installing backdoors or remote access tools, and establishing persistent access. The goal is to simulate the actions of a real attacker and assess the potential impact of a successful compromise.
+
+5. **Covering Tracks**  
+   In the final phase, the ethical hacker removes any traces of their activity on the target system or network. This includes deleting logs, modifying or removing files, and restoring the system to its original state. The objective is to ensure the ethical hacking activity remains undetected, leaving no evidence of the penetration testing.

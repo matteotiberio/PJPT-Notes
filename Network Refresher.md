@@ -1,203 +1,156 @@
-# IP Addresses 
+# IP Addresses
 
-## IPv4 e IPv6
+## IPv4 and IPv6
 
-IPv4 (Internet Protocol versione 4) e IPv6 (Internet Protocol versione 6) sono due versioni del Protocollo Internet, il protocollo di base che permette la comunicazione su internet. Vengono usati per identificare e localizzare i dispositivi su una rete.
+IPv4 (Internet Protocol version 4) and IPv6 (Internet Protocol version 6) are two versions of the Internet Protocol, the fundamental protocol that enables communication on the internet. They are used to identify and locate devices on a network.
 
 ## IPv4
 
-Gli indirizzi IPv4 sono indirizzi numerici a 32 bit rappresentati in formato decimale puntato, come ad esempio "192.168.0.1".
- Ogni sezione, o ottetto, dell’indirizzo è composta da 8 bit e può variare da 0 a 255. Questo permette un totale di circa 4,3 miliardi di indirizzi unici.
- Tuttavia, a causa della crescita rapida di internet, il numero di indirizzi IPv4 disponibili è diventato limitato, portando allo sviluppo di IPv6.
+IPv4 addresses are 32-bit numeric addresses represented in dotted decimal format, such as "192.168.0.1".  
+Each section, or octet, of the address consists of 8 bits and can range from 0 to 255. This allows for approximately 4.3 billion unique addresses.  
+However, due to the rapid growth of the internet, the number of available IPv4 addresses has become limited, leading to the development of IPv6.
 
-Classi di indirizzi IPv4
-Gli indirizzi IPv4 sono divisi in classi, che definiscono la dimensione della rete e dell’host, e aiutano a identificare l’uso previsto degli indirizzi. Le principali classi sono:
+### IPv4 Address Classes
 
-| Classe | Intervallo indirizzi | Uso principale | Bit di rete / host |
-| A | 0.0.0.0 – 127.255.255.255 | Reti molto grandi | 8 bit rete / 24 bit host |
-| B | 128.0.0.0 – 191.255.255.255 | Reti di dimensione media | 16 bit rete / 16 bit host |
-| C | 192.0.0.0 – 223.255.255.255 | Reti piccole | 24 bit rete / 8 bit host |
-| D | 224.0.0.0 – 239.255.255.255 | Multicast | Non applicabile |
-| E | 240.0.0.0 – 255.255.255.255 | Uso futuro o sperimentale | Non applicabile |
+IPv4 addresses are divided into classes, which define the size of the network and host portions, and help identify the intended use of the addresses. The main classes are:
 
+| Class | Address Range              | Main Use               | Network/Host Bits          |
+|-------|----------------------------|------------------------|---------------------------|
+| A     | 0.0.0.0 – 127.255.255.255  | Very large networks    | 8 bits network / 24 bits host |
+| B     | 128.0.0.0 – 191.255.255.255| Medium-sized networks  | 16 bits network / 16 bits host|
+| C     | 192.0.0.0 – 223.255.255.255| Small networks         | 24 bits network / 8 bits host |
+| D     | 224.0.0.0 – 239.255.255.255| Multicast              | Not applicable            |
+| E     | 240.0.0.0 – 255.255.255.255| Future or experimental use | Not applicable         |
 
+- **Class A:** Intended for very large networks (e.g., large organizations). The first octet identifies the network, the remaining three are for hosts.  
+- **Class B:** Used for medium-sized networks. The first two octets identify the network, the last two are for hosts.  
+- **Class C:** For smaller networks, such as small businesses or home networks.  
+- **Class D:** Reserved for multicast addresses, used for transmissions to groups of recipients.  
+- **Class E:** Reserved for future or experimental use, not used on the public internet.
 
-• Classe A: destinata a reti molto grandi (es. grandi organizzazioni). Il primo ottetto identifica la rete, i restanti tre sono per gli host.
-
-• Classe B: usata per reti di medie dimensioni. I primi due ottetti identificano la rete, gli ultimi due gli host.
-
-• Classe C: per reti più piccole, come le piccole aziende o reti domestiche.
-
-• Classe D: riservata per indirizzi multicast, usati per trasmissioni a gruppi di destinatari.
-
-• Classe E: riservata per usi futuri o sperimentali, non usata nella rete pubblica.
-
-
+---
 
 ## IPv6
 
-Gli indirizzi IPv6 sono indirizzi a 128 bit rappresentati in formato esadecimale, come ad esempio "2001:0db8:85a3:0000:0000:8a2e:0370:7334".
- La lunghezza maggiore degli indirizzi IPv6 permette di avere un numero molto più grande di indirizzi unici, circa 3,4×10^38.
- Gli indirizzi IPv6 sono divisi in otto gruppi di quattro cifre esadecimali, separati da due punti (:).
- Gli zeri iniziali di un gruppo possono essere omessi e gruppi consecutivi di zeri possono essere abbreviati con una doppia due punti (::) per semplificare la scrittura.
+IPv6 addresses are 128-bit addresses represented in hexadecimal format, such as `2001:0db8:85a3:0000:0000:8a2e:0370:7334`.  
+The longer length of IPv6 addresses allows for a much larger number of unique addresses, approximately 3.4×10^38.  
+IPv6 addresses are divided into eight groups of four hexadecimal digits, separated by colons (`:`).  
+Leading zeros in a group can be omitted, and consecutive groups of zeros can be abbreviated with a double colon (`::`) to simplify notation.
 
-## Transizione da IPv4 a IPv6
+---
 
-La transizione da IPv4 a IPv6 è necessaria per via dell’esaurimento degli indirizzi IPv4 disponibili.
- IPv6 offre una soluzione al problema della scarsità di indirizzi, introducendo anche miglioramenti in termini di sicurezza, configurazione automatica e altre funzionalità.
- Tuttavia, IPv4 e IPv6 non sono direttamente compatibili tra loro, quindi sono stati sviluppati meccanismi e tecnologie di transizione per permettere la comunicazione tra i due protocolli.
+## Transition from IPv4 to IPv6
 
-*In sintesi:*
+The transition from IPv4 to IPv6 is necessary due to the exhaustion of available IPv4 addresses.  
+IPv6 offers a solution to the address scarcity problem, introducing improvements in security, auto-configuration, and other features.  
+However, IPv4 and IPv6 are not directly compatible with each other, so transition mechanisms and technologies have been developed to enable communication between the two protocols.
 
-IPv4 e IPv6 sono versioni del Protocollo Internet che forniscono indirizzi unici ai dispositivi su una rete.
- Gli indirizzi IPv4 sono a 32 bit, mentre quelli IPv6 sono a 128 bit.
- IPv6 offre uno spazio di indirizzamento molto più ampio e caratteristiche aggiuntive rispetto a IPv4.
+---
 
+**In summary:**
+
+- IPv4 and IPv6 are versions of the Internet Protocol that provide unique addresses to devices on a network.  
+- IPv4 addresses are 32-bit, while IPv6 addresses are 128-bit.  
+- IPv6 offers a much larger address space and additional features compared to IPv4.
+
+---
 
 # MAC Addresses
 
-Le prime 3 coppie di un MAC sono identificativi del produttore.
+The first 3 pairs of a MAC address identify the manufacturer.
 
-Possiamo usare dei tool come MAC Address and OUI Lookup per determinare i vendor specifici:
+We can use tools like MAC Address and OUI Lookup to determine specific vendors:
 
-![alt text](/Images/MAC.png)
+![MAC Address Example](/Images/MAC.png)
 
-In questo caso 52:54:00 corrisponde all'identificativo della RealtekU
+In this case, `52:54:00` corresponds to the RealtekU vendor identifier.
 
+---
 
-# TCP, UDP and THree-Way Handshake
+# TCP, UDP, and Three-Way Handshake
 
-TCP = Transimission Control Protocol - Connection Oriented Protocol - High reliability (http, https, ssh...)
-UDP = User Datagram Protocol - Connection Less Protocol - (dns, voip...)
+- **TCP** = Transmission Control Protocol - Connection-Oriented Protocol - High reliability (http, https, ssh...)  
+- **UDP** = User Datagram Protocol - Connectionless Protocol - (dns, voip...)
 
-SYN - SYNCRONIZE
-SYN ACK - SYNCRONIZE ACKNOWEGMENT
-ACK - ACKNOWEGMENT
+**SYN** - SYNCHRONIZE  
+**SYN ACK** - SYNCHRONIZE ACKNOWLEDGMENT  
+**ACK** - ACKNOWLEDGMENT
 
-Manda un pacchetto SYN ad una porta o servizio specifico, la porta risponde con SYN ACK per dire che la porta è disponibieile e poi risponde con un ACK :
+The client sends a SYN packet to a specific port or service; the port responds with SYN ACK to indicate availability, then the client responds with an ACK:
 
+![Three-Way Handshake](/Images/TWH.png)
 
-![alt text](/Images/TWH.png)
+- **Packet 280:** IP `192.169.57.139` sends a SYN packet to IP `74.125.21.155` from port `52610` to port `443`  
+- **Packet 284:** IP `74.125.21.155` responds with SYN ACK from port `443` to `52610`  
+- **Packet 285:** Connection established
 
-
-**Pacchetto 280:**  IP 192.169.57.139 manda un pacchetto SYN all'ip 74.125.21.155 dalla porta 52610 alla 443
-
-**Pacchetto 284:** L'ip 74.125.21.155 risponde con un SYN ACK dalla porta 443 alla 52610
-
-**Pacchetto 285:** Connessione effettuata
+---
 
 # Common Ports and Protocols
 
-Ecco alcune porte comunemente usate e i protocolli associati nel networking:
+Here are some commonly used ports and associated protocols in networking:
 
-• **FTP** (File Transfer Protocol): Porta 21 (TCP)
+- **FTP** (File Transfer Protocol): Port 21 (TCP)  
+- **SSH** (Secure Shell): Port 22 (TCP)  
+- **Telnet:** Port 23 (TCP)  
+- **SMTP** (Simple Mail Transfer Protocol): Port 25 (TCP)  
+- **DNS** (Domain Name System): Port 53 (TCP and UDP)  
+- **HTTP** (Hypertext Transfer Protocol): Port 80 (TCP)  
+- **HTTPS** (Hypertext Transfer Protocol Secure): Port 443 (TCP)  
+- **DHCP** (Dynamic Host Configuration Protocol): Ports 67 (UDP) and 68 (UDP)  
+- **POP3** (Post Office Protocol version 3): Port 110 (TCP)  
+- **IMAP** (Internet Message Access Protocol): Port 143 (TCP)  
+- **SNMP** (Simple Network Management Protocol): Port 161 (UDP)  
+- **RDP** (Remote Desktop Protocol): Port 3389 (TCP)  
+- **NTP** (Network Time Protocol): Port 123 (UDP)  
+- **SMB** (Server Message Block): Port 445 (TCP)  
+- **FTPS** (FTP over SSL/TLS): Port 990 (TCP)  
+- **TFTP** (Trivial File Transfer Protocol): Port 69 (UDP)  
+- **LDAP** (Lightweight Directory Access Protocol): Ports 389 (TCP and UDP)  
+- **MySQL:** Port 3306 (TCP)
 
-• **SSH** (Secure Shell): Porta 22 (TCP)
+*Note:* Some protocols use both TCP and UDP depending on specific functionality. Also, these port assignments are not exhaustive—many applications and services may use different or custom ports.
 
-• **Telnet** Porta 23 (TCP)
-
-• **SMTP** (Simple Mail Transfer Protocol): Porta 25 (TCP)
-
-• **DNS** (Domain Name System): Porta 53 (TCP e UDP)
-
-• **HTTP** (Hypertext Transfer Protocol): Porta 80 (TCP)
-
-• **HTTPS** (Hypertext Transfer Protocol Secure): Porta 443 (TCP)
-
-• **DHCP** (Dynamic Host Configuration Protocol): Porta 67 (UDP) e 68 (UDP)
-
-• **POP3** (Post Office Protocol version 3): Porta 110 (TCP)
-
-• **IMAP** (Internet Message Access Protocol): Porta 143 (TCP)
-
-• **SNMP** (Simple Network Management Protocol): Porta 161 (UDP)
-
-• **RDP** (Remote Desktop Protocol): Porta 3389 (TCP)
-
-• **NTP** (Network Time Protocol): Porta 123 (UDP)
-
-• **SMB** (Server Message Block): Porta 445 (TCP)
-
-• **FTPS** (FTP over SSL/TLS): Porta 990 (TCP)
-
-• **TFTP** (Trivial File Transfer Protocol): Porta 69 (UDP)
-
-• **LDAP** (Lightweight Directory Access Protocol): Porta 389 (TCP e UDP)
-
-• **MySQL** Porta 3306 (TCP)
-
-
-
-*Nota:*
-Alcuni protocolli usano sia TCP che UDP, a seconda della funzionalit√† specifica. Inoltre, queste assegnazioni di porte non sono esaustive: molte altre applicazioni e servizi possono usare porte diverse o personalizzate.
+---
 
 # The OSI Model
 
-Il **modello OSI** (Open Systems Interconnection) è un quadro concettuale che standardizza le funzioni di un sistema di comunicazione in sette livelli distinti. Ogni livello ha responsabilità specifiche e interagisce con i livelli sopra e sotto di esso. Il modello OSI fornisce un approccio strutturato per comprendere e progettare protocolli di rete e sistemi di comunicazione. Ecco una breve panoramica di ogni livello:
+The **OSI Model** (Open Systems Interconnection) is a conceptual framework that standardizes the functions of a communication system into seven distinct layers. Each layer has specific responsibilities and interacts with the layers above and below it. The OSI model provides a structured approach to understanding and designing network protocols and communication systems. Here is a brief overview of each layer:
 
-• **Livello fisico (Physical Layer):**
- Il livello fisico è responsabile della trasmissione e ricezione di bit di dati grezzi e non strutturati su un mezzo fisico. Definisce le caratteristiche elettriche, meccaniche e funzionali dell’interfaccia fisica tra i dispositivi.
+- **Physical Layer:**  
+  Responsible for transmitting and receiving raw, unstructured bits over a physical medium. Defines the electrical, mechanical, and functional characteristics of the physical interface between devices.
 
-• **Livello data link (Data Link Layer):**
- Il livello data link gestisce la trasmissione affidabile di frame dati tra nodi direttamente connessi su un collegamento fisico. Fornisce rilevazione e correzione degli errori, controllo del flusso e gestisce l’accesso al mezzo fisico. Ethernet, Wi-Fi e PPP (Point-to-Point Protocol) sono esempi di protocolli di questo livello.
+- **Data Link Layer:**  
+  Manages reliable transmission of data frames between nodes directly connected on a physical link. Provides error detection and correction, flow control, and manages access to the physical medium. Examples include Ethernet, Wi-Fi, and PPP (Point-to-Point Protocol).
 
-• **Livello rete (Network Layer):**
- Il livello rete permette il routing dei pacchetti dati attraverso diverse reti. Si occupa dell’indirizzamento logico e determina il percorso migliore per la consegna dei dati basandosi sulle condizioni di rete e sui protocolli di routing. L’IP (Internet Protocol) è un protocollo chiave di questo livello.
+- **Network Layer:**  
+  Enables routing of data packets across different networks. Handles logical addressing and determines the best path for data delivery based on network conditions and routing protocols. IP (Internet Protocol) is a key protocol at this layer.
 
-• **Livello trasporto (Transport Layer):**
- Il livello trasporto garantisce la consegna affidabile e ordinata dei dati tra sistemi finali. Suddivide i dati in segmenti più piccoli, gestisce la comunicazione end-to-end e fornisce il recupero dagli errori, il controllo del flusso e della congestione. TCP (Transmission Control Protocol) e UDP (User Datagram Protocol) operano a questo livello.
+- **Transport Layer:**  
+  Ensures reliable and ordered delivery of data between end systems. Segments data into smaller units, manages end-to-end communication, and provides error recovery, flow control, and congestion control. TCP (Transmission Control Protocol) and UDP (User Datagram Protocol) operate at this layer.
 
-• **Livello sessione (Session Layer):**
- Il livello sessione stabilisce, gestisce e termina le sessioni di comunicazione tra applicazioni. Fornisce meccanismi di sincronizzazione e controllo del dialogo per abilitare una comunicazione fluida tra dispositivi. Gestisce anche il checkpointing e il recupero delle sessioni.
+- **Session Layer:**  
+  Establishes, manages, and terminates communication sessions between applications. Provides synchronization and dialog control mechanisms to enable smooth communication between devices. Also handles checkpointing and session recovery.
 
-• **Livello presentazione (Presentation Layer):**
- Il livello presentazione è responsabile della rappresentazione dei dati, della crittografia, compressione e formattazione. Garantisce che i dati inviati dal livello applicazione di un sistema siano comprensibili dal livello applicazione di un altro sistema. Si occupa della sintassi e della semantica dei dati.
+- **Presentation Layer:**  
+  Responsible for data representation, encryption, compression, and formatting. Ensures that data sent from the application layer of one system is understandable by the application layer of another system. Deals with syntax and semantics of the data.
 
-• **Livello applicazione (Application Layer):**
- Il livello applicazione è il livello più vicino all’utente finale e fornisce servizi direttamente alle applicazioni utente. Include protocolli per vari servizi di livello applicativo come trasferimento file, email, navigazione web e accesso remoto. Esempi di protocolli a questo livello sono HTTP, SMTP, FTP e DNS.
+- **Application Layer:**  
+  The closest layer to the end user, providing services directly to user applications. Includes protocols for various application-level services like file transfer, email, web browsing, and remote access. Examples include HTTP, SMTP, FTP, and DNS.
 
+---
 
+There is a mnemonic to remember the OSI layers:
 
-C'è un sistema mnemonico utile per ricordarsi i vari Layter:
+- *Please* : Physical (Data, Cables, Cat6...)  
+- *Do* : Data (Switching, MAC Address)  
+- *Not* : Network (IP Addresses, Routing...)  
+- *Throw* : Transport (TCP/UDP)  
+- *Sausage* : Session (Session Management)  
+- *Pizza* : Presentation (WMV, JPEG, MOV...)  
+- *Away* : Application (HTTP, SMTP...)
 
--*Please* : Physical (Data,  Cavi, Cat6...)
+---
 
--*Do*: Data (Switching, MAC Address)
-
--*Not*: Network (IP Addresses, routing*...)
-
--*Throw*: Transport (TCP/UDP)
-
--*Sausage*: Session (Session Management)
-
--*Pizza*: Presentation (WMV, JPEG, MOV...)
-
--*Away*: Application (HTTP, SMTP...)
-
-
-*routing* = instradare i dati all'interno di una rete o tra reti diverse, cioè decidere il percorso migliore che un pacchetto di dati deve seguire per arrivare dalla sua origine alla destinazione:
-quando invii un messaggio o un file via internet o in una rete, i dati non viaggiano direttamente da te al destinatario.
-I dati passano attraverso diversi dispositivi di rete chiamati router.
-Il router legge l'indirizzo di destinazione del pacchetto dati e decide su quale strada inviarlo, basandosi su una tabella di instradamento e regole specifiche.
-Questo processo di scelta del percorso e inoltro dei pacchetti si chiama routing.
-Permette di collegare reti diverse tra loro (es. la tua rete domestica con internet).
-Ottimizza il traffico dati, evitando percorsi sovraccarichi o guasti.
-Consente la comunicazione globale tra milioni di dispositivi.
-
-# Subnetting 
-
-
-
-*Risorse:*
-
--Seven Second Subnetting: https://www.youtube.com/watch?v=ZxAwQB8TZsM
--Subnet Guide: https://drive.google.com/file/d/1ETKH31-E7G-7ntEOlWGZcDZWuukmeHFe/view
-
-
-
-
-
-
-
-
-
+*Routing* = directing data within a network or between different networks, i.e., deciding the best path a data packet must follow to get from source to destination:  
+When you send a message or file over the
